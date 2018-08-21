@@ -1,0 +1,52 @@
+unit u_relloja;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, QRCtrls, QuickRpt, ExtCtrls;
+
+type
+  Tfr_rellojas = class(TForm)
+    QuickRep1: TQuickRep;
+    QRBand1: TQRBand;
+    QRBand2: TQRBand;
+    QRBand3: TQRBand;
+    QRLabel1: TQRLabel;
+    QRLabel2: TQRLabel;
+    QRSysData1: TQRSysData;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRShape1: TQRShape;
+    QRDBText1: TQRDBText;
+    QRDBText2: TQRDBText;
+    QRDBText3: TQRDBText;
+    QRLabel6: TQRLabel;
+    QRDBText4: TQRDBText;
+    QRLabel7: TQRLabel;
+    QRDBText5: TQRDBText;
+    procedure FormKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  fr_rellojas: Tfr_rellojas;
+
+implementation
+
+{$R *.dfm}
+
+procedure Tfr_rellojas.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  If (key = vk_F1)
+  Then fr_ajuda.show;
+
+end;
+
+end.
